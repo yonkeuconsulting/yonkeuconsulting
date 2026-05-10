@@ -713,7 +713,76 @@
     <div class="footer-legal">Auto-entrepreneur · SIRET : 103 483 764 00017 · Île-de-France</div>
   </div>
 </footer>
+/* RESPONSIVE MOBILE */
+@media screen and (max-width: 768px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 120px 20px 60px;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 320px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .services-grid,
+    .offers-grid,
+    .faq-grid,
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
 <script>
   function toggleFaq(btn) {
     const answer = btn.nextElementSibling;
