@@ -17,8 +17,8 @@
       --white: #ffffff;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: "Montserrat", sans-serif; background: var(--white); color: var(--black); overflow-x: hidden; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: "Montserrat", sans-serif; background: var(--white); color: var(--black); overflow-x: hidden; max-width: 100%; }
 
     /* NAV */
     nav {
@@ -52,7 +52,7 @@
     .nav-cta:hover { background: var(--gold); color: var(--white); }
 
     /* HERO */
-    .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding-top: 80px; }
+    .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding-top: 80px; max-width: 100%; overflow-x: hidden; }
     .hero-left { padding: 80px 60px; animation: fadeInLeft 1s ease both; }
     .hero-tag {
       font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
@@ -107,7 +107,7 @@
     .hero-badge-sub { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-top: 2px; }
 
     /* PILLARS */
-    .pillars { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(184,149,42,0.2); border-bottom: 1px solid rgba(184,149,42,0.2); }
+    .pillars { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(184,149,42,0.2); border-bottom: 1px solid rgba(184,149,42,0.2); max-width: 100%; overflow-x: hidden; }
     .pillar {
       padding: 48px; display: flex; align-items: center; gap: 20px;
       border-right: 1px solid rgba(184,149,42,0.2); transition: background 0.3s;
@@ -363,6 +363,11 @@
       .faq-question { font-size: 12px; padding: 16px 20px; gap: 12px; }
       .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
     }
+
+    /* PREVENT HORIZONTAL SCROLL GLOBALLY */
+    *, *::before, *::after { max-width: 100%; }
+    section, nav, footer, .pillars { overflow-x: hidden; }
+    .hero-image-frame { display: none; }
   </style>
 </head>
 <body>
